@@ -36,7 +36,6 @@ export default function AboutPage() {
         <div className="about-copy">
           <div className="prose-block">
             <p className="section-kicker">Biography</p>
-            <h2>Mathematics across dynamics, geometry, and number theory.</h2>
             <p>
               Hello! I am currently a {" "}
               <a href="https://www.pims.math.ca/" target="_blank" rel="noreferrer">PIMS</a>

@@ -58,7 +58,7 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${playfair.variable} ${bitterName.variable} ${maShanZhengName.variable} antialiased`}
         style={{
-          "--hero-image": `url("${publicAsset("/images/hero-orbit.jpg")}")`,
+          "--hero-image": `url("${publicAsset("/images/hero-warm-ivory.png")}")`,
         } as CSSProperties}
       >
         {children}

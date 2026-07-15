@@ -37,7 +37,7 @@ const works = [
 
 export default function ResearchPage() {
   return (
-    <main className="site-shell interior-page">
+    <main className="site-shell interior-page research-page">
       <SiteHeader active="research" />
       <section className="page-hero research-hero">
         <div>
@@ -47,18 +47,6 @@ export default function ResearchPage() {
             My research interests lie in arithmetic dynamics, Arakelov
             geometry, and Diophantine geometry.
           </p>
-        </div>
-      </section>
-
-      <section className="research-interests" aria-labelledby="interests-heading">
-        <p className="section-kicker">Research interests</p>
-        <h2 id="interests-heading">
-          Arboreal Galois representations, height theory, and unlikely intersections.
-        </h2>
-        <div className="interest-grid" aria-label="Research themes">
-          <article><span>01</span><h3>Arithmetic dynamics</h3></article>
-          <article><span>02</span><h3>Arakelov geometry</h3></article>
-          <article><span>03</span><h3>Diophantine geometry</h3></article>
         </div>
       </section>
 

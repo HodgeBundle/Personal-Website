@@ -73,31 +73,39 @@ export default function Home() {
 
 function TreeIcon() {
   return (
-    <svg className="area-icon" viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M10 17V9m0 4L6 9m4 1 4-4M6 9V5M14 6V3M6 9 3 6" />
-      <circle cx="3" cy="6" r="1" />
-      <circle cx="6" cy="5" r="1" />
-      <circle cx="14" cy="3" r="1" />
+    <svg className="area-icon" viewBox="0 0 40 40" aria-hidden="true">
+      <circle cx="20" cy="20" r="17" />
+      <path d="M20 32V16m0 10-7-7m7 2 7-8m-14 6v-6m14 0V8m-7 8-4-5m4 5 4-5" />
+      <circle cx="13" cy="13" r="1.4" />
+      <circle cx="16" cy="11" r="1.4" />
+      <circle cx="24" cy="11" r="1.4" />
+      <circle cx="27" cy="8" r="1.4" />
     </svg>
   );
 }
 
 function OrbitIcon() {
   return (
-    <svg className="area-icon" viewBox="0 0 20 20" aria-hidden="true">
-      <circle cx="10" cy="10" r="2.5" />
-      <circle cx="10" cy="10" r="6" />
-      <path d="M3.5 13.2C5.6 17 10.2 18.5 14 16.4" />
-      <circle cx="3.5" cy="13.2" r="0.9" />
+    <svg className="area-icon" viewBox="0 0 40 40" aria-hidden="true">
+      <circle cx="20" cy="18" r="14" />
+      <path d="M9 21c1.5 8 6.2 14 11 14s9.5-6 11-14M12 23c1.3 5.5 4.5 9.5 8 9.5s6.7-4 8-9.5M15 25c1 3 2.8 5 5 5s4-2 5-5" />
     </svg>
   );
 }
 
 function IntersectionIcon() {
   return (
-    <svg className="area-icon" viewBox="0 0 20 20" aria-hidden="true">
-      <circle cx="7.3" cy="10" r="5.2" />
-      <circle cx="12.7" cy="10" r="5.2" />
+    <svg className="area-icon" viewBox="0 0 40 40" aria-hidden="true">
+      <defs>
+        <clipPath id="intersection-clip">
+          <circle cx="24" cy="20" r="12" />
+        </clipPath>
+      </defs>
+      <circle cx="16" cy="20" r="12" />
+      <circle cx="24" cy="20" r="12" />
+      <g clipPath="url(#intersection-clip)" className="intersection-hatch">
+        <path d="M6 31 27 10M10 35l21-21M14 39l21-21" />
+      </g>
     </svg>
   );
 }
