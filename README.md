@@ -3,6 +3,8 @@
 Source for the personal academic website of Zheng Zhu (朱政), PIMS
 Postdoctoral Fellow at the University of Calgary.
 
+Published at <https://hodgebundle.github.io/Personal-Website/>.
+
 The site presents research interests, publications and preprints, teaching
 history, biography, and contact information. Its visual system uses a dark
 editorial palette, Playfair Display for English display typography, Manrope for
@@ -31,11 +33,17 @@ The production build is validated with:
 npm run build
 ```
 
+The GitHub Pages static export can be generated with:
+
+```bash
+npm run build:pages
+```
+
 ## Technology
 
 - Next.js / React
-- Vinext and Vite
-- Cloudflare-compatible server output
+- Static export for GitHub Pages
+- Vinext and Vite for local and Sites-compatible development
 - Responsive CSS with reduced-motion support
 
 ## Content updates

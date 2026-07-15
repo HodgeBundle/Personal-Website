@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/site-shell";
+import { publicAsset } from "../site-paths";
 
 export const metadata: Metadata = {
   title: "About",
@@ -24,7 +25,7 @@ export default function AboutPage() {
       <section className="about-layout" aria-label="Biography and contact information">
         <figure className="portrait-wrap">
           <img
-            src="/images/zheng-zhu.jpg"
+            src={publicAsset("/images/zheng-zhu.jpg")}
             alt="Zheng Zhu standing outdoors beside a stone sculpture"
             width={562}
             height={737}

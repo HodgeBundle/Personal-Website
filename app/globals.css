@@ -144,7 +144,7 @@ button:focus-visible {
 
 .hero-art {
   z-index: -3;
-  background: url("/images/hero-orbit.jpg") 74% 50% / cover no-repeat;
+  background: var(--hero-image) 74% 50% / cover no-repeat;
   opacity: 0.92;
   filter: contrast(1.08) brightness(1.06);
   animation: hero-reveal 1000ms cubic-bezier(.2,.65,.25,1) both;
@@ -417,7 +417,7 @@ button:focus-visible {
   bottom: 0;
   width: 57%;
   content: "";
-  background: url("/images/hero-orbit.jpg") 77% 47% / cover no-repeat;
+  background: var(--hero-image) 77% 47% / cover no-repeat;
   opacity: 0.25;
   filter: contrast(1.08);
   mask-image: linear-gradient(90deg, transparent, #000 42%);
