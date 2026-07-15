@@ -11,10 +11,12 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <img
           className="hero-art"
-          src={publicAsset("/images/hero-warm-ivory.png")}
+          src={publicAsset("/images/hero-warm-ivory-safari.jpg")}
           alt=""
           width={1023}
           height={1279}
+          loading="eager"
+          decoding="sync"
           aria-hidden="true"
         />
         <div className="hero-shade" aria-hidden="true" />
