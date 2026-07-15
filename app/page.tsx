@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./components/site-shell";
+import { publicAsset } from "./site-paths";
 
 export default function Home() {
   return (
@@ -7,7 +9,14 @@ export default function Home() {
       <SiteHeader active="home" />
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-art" aria-hidden="true" />
+        <img
+          className="hero-art"
+          src={publicAsset("/images/hero-warm-ivory.png")}
+          alt=""
+          width={1023}
+          height={1279}
+          aria-hidden="true"
+        />
         <div className="hero-shade" aria-hidden="true" />
 
         <div className="hero-copy">
@@ -76,10 +85,10 @@ function TreeIcon() {
     <svg className="area-icon" viewBox="0 0 40 40" aria-hidden="true">
       <circle cx="20" cy="20" r="17" />
       <path d="M20 32V16m0 10-7-7m7 2 7-8m-14 6v-6m14 0V8m-7 8-4-5m4 5 4-5" />
-      <circle cx="13" cy="13" r="1.4" />
-      <circle cx="16" cy="11" r="1.4" />
-      <circle cx="24" cy="11" r="1.4" />
-      <circle cx="27" cy="8" r="1.4" />
+      <circle className="icon-node" cx="13" cy="13" r="1.4" />
+      <circle className="icon-node" cx="16" cy="11" r="1.4" />
+      <circle className="icon-node" cx="24" cy="11" r="1.4" />
+      <circle className="icon-node" cx="27" cy="8" r="1.4" />
     </svg>
   );
 }

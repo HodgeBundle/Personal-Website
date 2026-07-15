@@ -20,6 +20,8 @@
 html {
   scroll-behavior: smooth;
   background: var(--ink);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -150,13 +152,17 @@ button:focus-visible {
 }
 
 .hero-art {
-  inset: 45px 1.5% 190px 47%;
+  inset: 45px 1.5% auto auto;
   z-index: 0;
-  background: var(--hero-image) 100% 50% / 100% 100% no-repeat;
+  width: 51.5%;
+  height: calc(100% - 235px);
+  display: block;
+  object-fit: fill;
+  object-position: center;
   opacity: 1;
   filter: none;
   mix-blend-mode: normal;
-  animation: hero-reveal 1000ms cubic-bezier(.2,.65,.25,1) both;
+  transform: none;
   pointer-events: none;
 }
 
@@ -233,7 +239,7 @@ button:focus-visible {
 
 .hero-contact {
   max-width: 920px;
-  margin-top: 84px;
+  margin-top: clamp(48px, 6vh, 84px);
   display: grid;
   grid-template-columns: 1.1fr 0.9fr 1fr;
   font-style: normal;
@@ -356,8 +362,8 @@ button:focus-visible {
 }
 
 .area-icon {
-  width: 1.8em;
-  height: 1.8em;
+  width: 2.15em;
+  height: 2.15em;
   flex: 0 0 auto;
   overflow: visible;
   color: var(--accent);
@@ -365,8 +371,13 @@ button:focus-visible {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.4;
+  stroke-width: 1.55;
   vector-effect: non-scaling-stroke;
+}
+
+.area-icon .icon-node {
+  fill: currentColor;
+  stroke: none;
 }
 
 .current-work .current-work-label {
@@ -880,8 +891,9 @@ button:focus-visible {
   }
 
   .hero-art {
-    inset: 80px -12% 190px 45%;
-    background-position: 100% 50%;
+    inset: 80px -12% auto auto;
+    width: 67%;
+    height: calc(100% - 270px);
     opacity: 0.72;
   }
 
