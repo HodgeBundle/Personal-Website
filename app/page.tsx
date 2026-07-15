@@ -38,11 +38,18 @@ export default function Home() {
 
         <aside className="current-work" aria-label="Current research themes">
           <span className="current-work-label">Current work</span>
-          <span>Arboreal Galois representations</span>
-          <span aria-hidden="true">·</span>
-          <span>Diophantine approximation</span>
-          <span aria-hidden="true">·</span>
-          <span>Unlikely intersections</span>
+          <span className="current-work-area">
+            <TreeIcon />
+            <span>Arboreal Galois representations</span>
+          </span>
+          <span className="current-work-area">
+            <OrbitIcon />
+            <span>Diophantine approximation</span>
+          </span>
+          <span className="current-work-area">
+            <IntersectionIcon />
+            <span>Unlikely intersections</span>
+          </span>
         </aside>
       </section>
 
@@ -61,5 +68,36 @@ export default function Home() {
 
       <SiteFooter />
     </main>
+  );
+}
+
+function TreeIcon() {
+  return (
+    <svg className="area-icon" viewBox="0 0 20 20" aria-hidden="true">
+      <path d="M10 17V9m0 4L6 9m4 1 4-4M6 9V5M14 6V3M6 9 3 6" />
+      <circle cx="3" cy="6" r="1" />
+      <circle cx="6" cy="5" r="1" />
+      <circle cx="14" cy="3" r="1" />
+    </svg>
+  );
+}
+
+function OrbitIcon() {
+  return (
+    <svg className="area-icon" viewBox="0 0 20 20" aria-hidden="true">
+      <circle cx="10" cy="10" r="2.5" />
+      <circle cx="10" cy="10" r="6" />
+      <path d="M3.5 13.2C5.6 17 10.2 18.5 14 16.4" />
+      <circle cx="3.5" cy="13.2" r="0.9" />
+    </svg>
+  );
+}
+
+function IntersectionIcon() {
+  return (
+    <svg className="area-icon" viewBox="0 0 20 20" aria-hidden="true">
+      <circle cx="7.3" cy="10" r="5.2" />
+      <circle cx="12.7" cy="10" r="5.2" />
+    </svg>
   );
 }
