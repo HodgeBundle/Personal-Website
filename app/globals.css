@@ -239,7 +239,7 @@ button:focus-visible {
 
 .hero-contact {
   max-width: 920px;
-  margin-top: clamp(48px, 6vh, 84px);
+  margin-top: clamp(28px, 3.8vh, 52px);
   display: grid;
   grid-template-columns: 0.72fr 0.9fr 1.25fr;
   font-style: normal;
