@@ -13,29 +13,34 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">PIMS Postdoctoral Fellow · University of Calgary</p>
           <h1 id="hero-title">
-            <span>Zheng Zhu</span>
+            <span className="english-name">Zheng Zhu</span>
             <span className="chinese-name" lang="zh-Hans">朱政</span>
           </h1>
           <p className="hero-intro">
-            I am a mathematician working in arithmetic dynamics, Arakelov
-            geometry, and Diophantine geometry.
+            I work in arithmetic dynamics, Arakelov geometry, and Diophantine
+            geometry.
           </p>
-          <div className="hero-actions">
-            <Link className="button button-primary" href="/research">
-              Research
-              <span aria-hidden="true">↗</span>
-            </Link>
-            <Link className="button button-secondary" href="/about">
-              About me
-            </Link>
-          </div>
+          <address className="hero-contact" aria-label="Contact information">
+            <div>
+              <span>Email</span>
+              <a href="mailto:zheng.zhu2@ucalgary.ca">zheng.zhu2@ucalgary.ca</a>
+            </div>
+            <div>
+              <span>Office</span>
+              <p>Mathematical Sciences 464</p>
+            </div>
+            <div>
+              <span>Affiliation</span>
+              <p>University of Calgary · PIMS</p>
+            </div>
+          </address>
         </div>
 
         <aside className="current-work" aria-label="Current research themes">
           <span className="current-work-label">Current work</span>
           <span>Arboreal Galois representations</span>
           <span aria-hidden="true">·</span>
-          <span>Height theory</span>
+          <span>Diophantine approximation</span>
           <span aria-hidden="true">·</span>
           <span>Unlikely intersections</span>
         </aside>
@@ -47,7 +52,7 @@ export default function Home() {
         <p>
           My work studies arithmetic questions arising from iteration, with
           particular interests in arboreal Galois representations,
-          equidistribution, and height theory.
+          equidistribution, and Diophantine approximation.
         </p>
         <Link className="text-link" href="/research">
           View research and publications <span aria-hidden="true">→</span>

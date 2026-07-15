@@ -25,6 +25,8 @@ html {
 body {
   --serif: var(--font-playfair), "Songti SC", "STSong", "Noto Serif CJK SC", serif;
   --serif-cn: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif;
+  --name-en: var(--font-bitter-name), "Bitter", serif;
+  --name-cn: var(--font-ma-shan-zheng-name), "Ma Shan Zheng", cursive;
   --sans: var(--font-manrope), "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   background: var(--ink);
@@ -177,43 +179,88 @@ button:focus-visible {
 
 .hero h1 {
   display: flex;
-  align-items: baseline;
-  gap: clamp(22px, 3vw, 42px);
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2px;
   margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(70px, 7.6vw, 108px);
-  font-weight: 600;
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  font-size: clamp(48px, 4.4vw, 53.3333px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.hero h1 .english-name {
+  font-family: var(--name-en);
+  font-size: 1em;
+  font-weight: 700;
 }
 
 .hero h1 .chinese-name {
-  position: relative;
   color: var(--ivory);
-  font-family: var(--serif-cn);
-  font-size: 0.54em;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
-
-.hero h1 .chinese-name::before {
-  position: absolute;
-  top: 18%;
-  bottom: 14%;
-  left: calc(-1 * clamp(12px, 1.6vw, 23px));
-  width: 1px;
-  content: "";
-  background: var(--line-strong);
+  font-family: var(--name-cn);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 .hero-intro {
   max-width: 570px;
-  margin: 32px 0 0;
+  margin: 28px 0 0;
   color: var(--body);
   font-size: clamp(16px, 1.4vw, 19px);
   font-weight: 400;
   line-height: 1.85;
   letter-spacing: -0.01em;
+}
+
+.hero-contact {
+  max-width: 800px;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 1fr;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+  font-style: normal;
+}
+
+.hero-contact > div {
+  min-height: 68px;
+  padding: 13px 20px 12px;
+  border-left: 1px solid var(--line);
+}
+
+.hero-contact > div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.hero-contact span {
+  display: block;
+  color: var(--accent-light);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.hero-contact p,
+.hero-contact a {
+  margin: 5px 0 0;
+  display: block;
+  color: var(--body);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.hero-contact a {
+  text-decoration: underline;
+  text-decoration-color: rgba(197, 138, 84, 0.6);
+  text-underline-offset: 4px;
+}
+
+.hero-contact a:hover {
+  color: var(--accent-light);
 }
 
 .hero-actions {
@@ -784,7 +831,7 @@ button:focus-visible {
   }
 
   .hero h1 {
-    font-size: clamp(58px, 14vw, 84px);
+    font-size: clamp(48px, 8vw, 53.3333px);
   }
 
   .hero-art {
@@ -932,18 +979,8 @@ button:focus-visible {
   }
 
   .hero h1 {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    font-size: clamp(52px, 16vw, 70px);
-  }
-
-  .hero h1 .chinese-name {
-    font-size: 0.55em;
-  }
-
-  .hero h1 .chinese-name::before {
-    display: none;
+    gap: 1px;
+    font-size: clamp(44px, 13.2vw, 53.3333px);
   }
 
   .hero-intro {
@@ -951,14 +988,20 @@ button:focus-visible {
     font-size: 15px;
   }
 
-  .hero-actions {
-    gap: 10px;
+  .hero-contact {
+    max-width: 360px;
+    grid-template-columns: 1fr;
   }
 
-  .button {
-    min-width: 138px;
-    padding-inline: 16px;
-    font-size: 9px;
+  .hero-contact > div {
+    min-height: auto;
+    padding: 11px 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .hero-contact > div:first-child {
+    border-top: 0;
   }
 
   .current-work {

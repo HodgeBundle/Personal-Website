@@ -62,24 +62,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <aside className="contact-card" aria-labelledby="contact-heading">
-            <p className="section-kicker">Contact</p>
-            <h2 id="contact-heading">University of Calgary</h2>
-            <dl>
-              <div>
-                <dt>Email</dt>
-                <dd><a href="mailto:zheng.zhu2@ucalgary.ca">zheng.zhu2@ucalgary.ca</a></dd>
-              </div>
-              <div>
-                <dt>Office</dt>
-                <dd>Mathematical Sciences 464</dd>
-              </div>
-              <div>
-                <dt>Affiliation</dt>
-                <dd>PIMS · Department of Mathematics and Statistics</dd>
-              </div>
-            </dl>
-          </aside>
         </div>
       </section>
       <SiteFooter />

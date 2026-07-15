@@ -18,6 +18,20 @@ const playfair = localFont({
   display: "swap",
 });
 
+const bitterName = localFont({
+  src: "./fonts/bitter-name.woff2",
+  variable: "--font-bitter-name",
+  weight: "700",
+  display: "swap",
+});
+
+const maShanZhengName = localFont({
+  src: "./fonts/ma-shan-zheng-name.woff2",
+  variable: "--font-ma-shan-zheng-name",
+  weight: "400",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Zheng Zhu | Mathematics",
@@ -42,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} ${playfair.variable} antialiased`}
+        className={`${manrope.variable} ${playfair.variable} ${bitterName.variable} ${maShanZhengName.variable} antialiased`}
         style={{
           "--hero-image": `url("${publicAsset("/images/hero-orbit.jpg")}")`,
         } as CSSProperties}
