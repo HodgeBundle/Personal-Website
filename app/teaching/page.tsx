@@ -4,6 +4,9 @@ import { SiteFooter, SiteHeader } from "../components/site-shell";
 export const metadata: Metadata = {
   title: "Teaching",
   description: "Courses taught by Zheng Zhu at the University of Calgary and University of Rochester.",
+  alternates: {
+    canonical: "https://hodgebundle.github.io/Personal-Website/teaching/",
+  },
 };
 
 const courses = [
