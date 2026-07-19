@@ -4,6 +4,9 @@ import { SiteFooter, SiteHeader } from "../components/site-shell";
 export const metadata: Metadata = {
   title: "Research",
   description: "Research interests, publications, and preprints by Zheng Zhu.",
+  alternates: {
+    canonical: "https://hodgebundle.github.io/Personal-Website/research/",
+  },
 };
 
 const works = [
