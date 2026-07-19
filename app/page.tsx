@@ -1,11 +1,58 @@
 /* eslint-disable @next/next/no-img-element */
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./components/site-shell";
 import { publicAsset } from "./site-paths";
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://hodgebundle.github.io/Personal-Website/",
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Zheng Zhu",
+  alternateName: "朱政",
+  url: "https://hodgebundle.github.io/Personal-Website/",
+  jobTitle: "PIMS Postdoctoral Fellow",
+  affiliation: [
+    {
+      "@type": "CollegeOrUniversity",
+      name: "University of Calgary",
+      url: "https://www.ucalgary.ca/",
+    },
+    {
+      "@type": "Organization",
+      name: "Pacific Institute for the Mathematical Sciences",
+      url: "https://www.pims.math.ca/",
+    },
+  ],
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "University of Rochester",
+    url: "https://www.rochester.edu/",
+  },
+  knowsAbout: [
+    "Arithmetic dynamics",
+    "Arakelov geometry",
+    "Diophantine geometry",
+    "Arboreal Galois representations",
+  ],
+  sameAs: [
+    "https://pims.math.ca/index.php/profiles/zheng-zhu",
+    "https://github.com/HodgeBundle",
+  ],
+};
+
 export default function Home() {
   return (
     <main className="site-shell home-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <SiteHeader active="home" />
 
       <section className="hero" aria-labelledby="hero-title">
