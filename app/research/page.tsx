@@ -35,13 +35,13 @@ const works = [
   },
   {
     type: "In preparation",
-    title: "On equidistribution of subvarieties with respect to mixed line bundles",
+    title: "On Equidistribution of Subvarieties with Respect to Mixed Line Bundles",
     authors: "with Peter J. Oberly and Thomas J. Tucker",
     status: "In preparation",
   },
   {
     type: "In preparation",
-    title: "Geometric monodromy and finite index for non-martingale quartic rational maps",
+    title: "Geometric Monodromy and Finite Index for Non-Martingale Quartic Rational Maps",
     status: "In preparation",
   },
   {
