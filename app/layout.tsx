@@ -33,14 +33,28 @@ const maShanZhengName = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hodgebundle.github.io/Personal-Website/"),
   title: {
-    default: "Zheng Zhu | Mathematics",
+    default: "Zheng Zhu | Mathematics | University of Calgary",
     template: "%s | Zheng Zhu",
   },
   description:
     "Zheng Zhu is a PIMS Postdoctoral Fellow at the University of Calgary working in arithmetic dynamics, Arakelov geometry, and Diophantine geometry.",
-  other: {
-    "codex-preview": "development",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    type: "website",
+    url: "https://hodgebundle.github.io/Personal-Website/",
+    title: "Zheng Zhu | Mathematics | University of Calgary",
+    description:
+      "Zheng Zhu is a PIMS Postdoctoral Fellow at the University of Calgary working in arithmetic dynamics, Arakelov geometry, and Diophantine geometry.",
+    siteName: "Zheng Zhu | Mathematics",
   },
   icons: {
     icon: publicAsset("/favicon.svg"),
