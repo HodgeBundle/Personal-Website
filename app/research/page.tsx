@@ -33,6 +33,22 @@ const works = [
     authors: "with Dang-Khoa Nguyen",
     status: "In preparation",
   },
+  {
+    type: "In preparation",
+    title: "On equidistribution of subvarieties with respect to mixed line bundles",
+    authors: "with Peter J. Oberly and Thomas J. Tucker",
+    status: "In preparation",
+  },
+  {
+    type: "In preparation",
+    title: "Geometric monodromy and finite index for non-martingale quartic rational maps",
+    status: "In preparation",
+  },
+  {
+    type: "In preparation",
+    title: "A Defect-to-Entanglement Dictionary for Twisted Carlitz Arboreal Towers",
+    status: "In preparation",
+  },
 ];
 
 export default function ResearchPage() {
@@ -70,7 +86,7 @@ export default function ResearchPage() {
                 ) : (
                   <h3>{work.title}</h3>
                 )}
-                <p className="work-authors">{work.authors}</p>
+                {work.authors && <p className="work-authors">{work.authors}</p>}
               </div>
               <p className="work-status">{work.status}</p>
             </li>
