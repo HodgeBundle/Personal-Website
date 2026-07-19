@@ -6,6 +6,9 @@ import { publicAsset } from "../site-paths";
 export const metadata: Metadata = {
   title: "About",
   description: "About Zheng Zhu, PIMS Postdoctoral Fellow at the University of Calgary.",
+  alternates: {
+    canonical: "https://hodgebundle.github.io/Personal-Website/about/",
+  },
 };
 
 export default function AboutPage() {
