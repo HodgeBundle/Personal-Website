@@ -26,12 +26,6 @@ const works = [
   },
   {
     type: "In preparation",
-    title: "Equidistribution of Subvarieties and Symmetric Relations",
-    authors: "with Peter Oberly and Thomas J. Tucker",
-    status: "In preparation",
-  },
-  {
-    type: "In preparation",
     title: "Local Arboreal Representations for Unicritical Polynomials of Arbitrary Degree",
     authors: "with Dang-Khoa Nguyen",
     status: "In preparation",
