@@ -5,49 +5,38 @@ Postdoctoral Fellow at the University of Calgary.
 
 Published at <https://hodgebundle.github.io/Personal-Website/>.
 
-The site presents research interests, publications and preprints, teaching
-history, biography, and contact information. Its visual system uses a dark
-editorial palette, Playfair Display for English display typography, Manrope for
-interface and body text, and a Song/Ming-style system font stack for the
-Chinese name.
-
 ## Pages
 
-- `/` — introduction and current research themes
-- `/about` — biography, portrait, affiliation, office, and contact information
-- `/research` — research interests, publications, preprints, and current work
-- `/teaching` — current and previous courses
-
-## Development
-
-Requires Node.js 22.13 or newer.
-
-```bash
-npm ci
-npm run dev
-```
-
-The production build is validated with:
-
-```bash
-npm run build
-```
-
-The GitHub Pages static export can be generated with:
-
-```bash
-npm run build:pages
-```
+- `/` — introduction, generative hero art, and current research themes
+- `/about/` — biography, portrait, affiliation, office, and contact information
+- `/research/` — research interests, publications, preprints, and current work
+- `/teaching/` — current and previous courses
 
 ## Technology
 
-- Next.js / React
-- Static export for GitHub Pages
-- Vinext and Vite for local and Sites-compatible development
-- Responsive CSS with reduced-motion support
+Plain static HTML/CSS/JS — no build step. The `site/` directory is deployed
+to GitHub Pages as-is by `.github/workflows/pages.yml`.
+
+The home page hero is a generative canvas piece (`site/assets/hero-art.js`):
+nested hairline orbits with points travelling along them, an iterate spiral
+converging to the fixed point z*, and an arboreal tree — a small portrait of
+arithmetic dynamics. It is deterministic (seeded PRNG), DPR-aware, and
+respects `prefers-reduced-motion`.
+
+The visual system uses a warm ivory paper palette with a copper accent,
+Playfair Display for English display type, Manrope for interface text,
+Geist Mono for labels, and Ma Shan Zheng (马善政) for the Chinese name.
+All fonts are self-hosted subsets in `site/assets/`.
+
+## Development
+
+Everything is static; open `site/index.html` directly or serve the folder:
+
+```bash
+cd site && python3 -m http.server 8000
+```
 
 ## Content updates
 
-Page content lives under `app/`. Shared navigation and footer markup lives in
-`app/components/site-shell.tsx`, while the visual system and responsive rules
-live in `app/globals.css`.
+Page content lives in the HTML files under `site/`. Shared styles live in
+`site/assets/site.css`. The portrait is `site/assets/zheng-zhu.jpg`.
