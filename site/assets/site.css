@@ -208,7 +208,7 @@ h1.name .cn {
 }
 .research .page-title {
   max-width: none; white-space: nowrap;
-  font-size: clamp(28px, 5.2vw, 76px);
+  font-size: clamp(26px, 5.2vw, 76px);
 }
 .page-title .cn { font-family: "MaShanZheng", cursive; font-weight: 400; font-size: 0.62em; margin-left: 0.18em; }
 .page-lede {
