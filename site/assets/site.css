@@ -82,9 +82,9 @@ nav.primary a[aria-current="page"] { color: var(--accent-deep); }
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
   gap: clamp(24px, 4vw, 72px);
-  align-items: center;
-  min-height: clamp(560px, 84vh, 780px);
-  padding-block: clamp(56px, 9vh, 110px);
+  align-items: start;
+  min-height: clamp(520px, 72.6vh, 700px);
+  padding-block: clamp(44px, 6vh, 72px) clamp(36px, 5vh, 56px);
 }
 /* faint dot lattice behind the copy column */
 .hero::before {
@@ -180,19 +180,6 @@ h1.name .cn {
   letter-spacing: 0.18em; text-transform: uppercase;
 }
 
-/* ---------- Summary ---------- */
-.summary {
-  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: clamp(28px, 6vw, 110px);
-  padding-block: clamp(56px, 9vh, 96px) clamp(48px, 8vh, 84px);
-}
-.summary h2 {
-  font-family: var(--serif); font-weight: 600;
-  font-size: clamp(30px, 3.8vw, 48px); line-height: 1.1; letter-spacing: -0.03em;
-  max-width: 16ch;
-}
-.summary .k { display: block; margin-bottom: 18px; }
-.summary p.body { max-width: 56ch; color: var(--muted); font-size: 15px; line-height: 1.9; }
 .text-link {
   display: inline-flex; gap: 10px; align-items: center; margin-top: 26px;
   padding-bottom: 5px; border-bottom: 1px solid var(--accent);
@@ -218,6 +205,10 @@ h1.name .cn {
   font-family: var(--serif); font-weight: 600;
   font-size: clamp(42px, 5.6vw, 76px); line-height: 1.04; letter-spacing: -0.032em;
   max-width: 18ch;
+}
+.research .page-title {
+  max-width: none; white-space: nowrap;
+  font-size: clamp(28px, 5.2vw, 76px);
 }
 .page-title .cn { font-family: "MaShanZheng", cursive; font-weight: 400; font-size: 0.62em; margin-left: 0.18em; }
 .page-lede {
@@ -335,18 +326,6 @@ h1.name .cn {
 .nf { padding-block: clamp(90px, 18vh, 170px); }
 .nf .page-lede { max-width: 40ch; }
 
-/* signature orbit motif on interior page heroes, dissolving at both edges */
-.page-hero .sig-art {
-  position: absolute; inset: 0 0 0 auto;
-  width: 46%; max-width: 620px; height: 100%;
-  pointer-events: none;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 40%, #000 92%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 40%, #000 92%, transparent 100%);
-}
-.page-hero .sig-art ellipse {
-  vector-effect: non-scaling-stroke;
-}
-
 /* ---------- Reveal-on-scroll (JS adds .is-in; safe without JS) ---------- */
 [data-reveal] {
   transition: opacity 640ms cubic-bezier(0.22, 0.7, 0.3, 1),
@@ -399,7 +378,6 @@ footer.site .geo { font-family: var(--mono); font-size: 11.5px; letter-spacing: 
   .current { grid-template-columns: 1fr; }
   .current .area { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
   .current .area:first-child { border-top: 0; }
-  .summary { grid-template-columns: 1fr; gap: 22px; }
   .about-layout { grid-template-columns: 1fr; }
   .portrait { max-width: 380px; }
   .works li { grid-template-columns: 34px minmax(0, 1fr); }
@@ -412,7 +390,6 @@ footer.site .geo { font-family: var(--mono); font-size: 11.5px; letter-spacing: 
   nav.primary { width: 100%; justify-content: space-between; }
   .eyebrow { flex-direction: column; align-items: flex-start; gap: 4px; }
   .eyebrow .sep { display: none; }
-  .sig-art { display: none; }
   .contact { grid-template-columns: 1fr; }
   .contact > div { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
   .contact > div:first-child { border-top: 0; }
