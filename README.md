@@ -24,7 +24,7 @@ arithmetic dynamics. It is deterministic (seeded PRNG), DPR-aware, and
 respects `prefers-reduced-motion`.
 
 The visual system uses a warm ivory paper palette with a copper accent,
-Playfair Display for English display type, Manrope for interface text,
+Bitter for the English name, Playfair Display for the remaining English display type, Manrope for interface text,
 Geist Mono for labels, and Ma Shan Zheng (马善政) for the Chinese name.
 All fonts are self-hosted subsets in `site/assets/`.
 

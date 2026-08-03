@@ -6,6 +6,7 @@
 
 @font-face { font-family: "Manrope"; src: url("manrope.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
 @font-face { font-family: "Playfair"; src: url("playfair.woff2") format("woff2"); font-weight: 500 700; font-display: swap; }
+@font-face { font-family: "Bitter"; src: url("bitter-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
 @font-face { font-family: "GeistMono"; src: url("geist-mono.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "MaShanZheng"; src: url("ma-shan-zheng.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
@@ -18,6 +19,7 @@
   --accent-deep: #8a542e;
   --line: rgba(24, 26, 29, 0.14);
   --serif: "Playfair", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  --name-serif: "Bitter", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
   --serif-cn: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif;
   --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
   --mono: "GeistMono", "SF Mono", "Cascadia Code", Consolas, monospace;
@@ -55,7 +57,7 @@ header.site {
 }
 .wordmark {
   display: inline-flex; align-items: baseline; gap: 12px; white-space: nowrap;
-  font-family: var(--serif); font-weight: 700;
+  font-family: var(--name-serif); font-weight: 700;
   font-size: clamp(21px, 2.2vw, 26px); letter-spacing: -0.02em; line-height: 1;
 }
 .wordmark .cn { font-family: "MaShanZheng", cursive; font-weight: 400; font-size: 0.88em; }
@@ -109,9 +111,9 @@ nav.primary a[aria-current="page"] { color: var(--accent-deep); }
 .eyebrow > span { white-space: nowrap; }
 h1.name { display: flex; flex-direction: column; gap: clamp(2px, 0.8vh, 10px); }
 h1.name .en {
-  font-family: var(--serif); font-weight: 600;
+  font-family: var(--name-serif); font-weight: 700;
   font-size: clamp(54px, 7.6vw, 108px);
-  line-height: 0.98; letter-spacing: -0.038em;
+  line-height: 0.98; letter-spacing: -0.032em;
 }
 h1.name .cn {
   font-family: "MaShanZheng", cursive;
@@ -132,24 +134,11 @@ h1.name .cn {
   pointer-events: none;
 }
 
-/* ---------- Contact: ruled rows, mono labels ---------- */
-.contact {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+/* ---------- Current work: numbered, hairline only ---------- */
+.home-current {
+  padding-top: 14px;
   border-top: 1px solid var(--line);
 }
-.contact > div { padding: 20px clamp(16px, 2.4vw, 32px) 22px 0; border-left: 1px solid var(--line); }
-.contact > div:first-child { border-left: 0; }
-.contact > div + div { padding-left: clamp(16px, 2.4vw, 32px); }
-.contact .label {
-  display: block; color: var(--accent-deep);
-  font-family: var(--mono); font-size: 11px; font-weight: 500;
-  letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px;
-}
-.contact .value { font-family: var(--serif); font-size: 16px; line-height: 1.5; overflow-wrap: break-word; }
-.contact a.value { border-bottom: 1px solid rgba(168, 111, 60, 0.55); padding-bottom: 1px; }
-.contact a.value:hover { color: var(--accent-deep); }
-
-/* ---------- Current work: numbered, hairline only ---------- */
 .current {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: clamp(30px, 5.4vh, 52px);
@@ -173,6 +162,9 @@ h1.name .cn {
   display: flex; align-items: baseline; justify-content: space-between;
   margin-top: clamp(48px, 8vh, 84px); margin-bottom: 14px;
 }
+.home-current .current-head { margin-top: 0; margin-bottom: 10px; }
+.home-current .current { margin-top: 0; }
+.home-current .current .area { padding-top: 18px; padding-bottom: 20px; }
 .current-head .k,
 .k {
   color: var(--accent-deep);
@@ -390,9 +382,6 @@ footer.site .geo { font-family: var(--mono); font-size: 11.5px; letter-spacing: 
   nav.primary { width: 100%; justify-content: space-between; }
   .eyebrow { flex-direction: column; align-items: flex-start; gap: 4px; }
   .eyebrow .sep { display: none; }
-  .contact { grid-template-columns: 1fr; }
-  .contact > div { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
-  .contact > div:first-child { border-top: 0; }
   .course { grid-template-columns: 1fr; gap: 10px; }
   .facts .row { grid-template-columns: 1fr; gap: 4px; }
 }
