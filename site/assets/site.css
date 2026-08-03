@@ -6,7 +6,7 @@
 
 @font-face { font-family: "Manrope"; src: url("manrope.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
 @font-face { font-family: "Playfair"; src: url("playfair.woff2") format("woff2"); font-weight: 500 700; font-display: swap; }
-@font-face { font-family: "Bitter"; src: url("bitter-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Ibarra Real Nova"; src: url("ibarra-real-nova-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 @font-face { font-family: "GeistMono"; src: url("geist-mono.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "MaShanZheng"; src: url("ma-shan-zheng.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
@@ -19,7 +19,7 @@
   --accent-deep: #8a542e;
   --line: rgba(24, 26, 29, 0.14);
   --serif: "Playfair", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
-  --name-serif: "Bitter", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  --name-serif: "Ibarra Real Nova", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
   --serif-cn: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif;
   --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
   --mono: "GeistMono", "SF Mono", "Cascadia Code", Consolas, monospace;
@@ -57,7 +57,7 @@ header.site {
 }
 .wordmark {
   display: inline-flex; align-items: baseline; gap: 12px; white-space: nowrap;
-  font-family: var(--name-serif); font-weight: 700;
+  font-family: var(--name-serif); font-weight: 600;
   font-size: clamp(21px, 2.2vw, 26px); letter-spacing: -0.02em; line-height: 1;
 }
 .wordmark .cn { font-family: "MaShanZheng", cursive; font-weight: 400; font-size: 0.88em; }
@@ -111,7 +111,7 @@ nav.primary a[aria-current="page"] { color: var(--accent-deep); }
 .eyebrow > span { white-space: nowrap; }
 h1.name { display: flex; flex-direction: column; gap: clamp(2px, 0.8vh, 10px); }
 h1.name .en {
-  font-family: var(--name-serif); font-weight: 700;
+  font-family: var(--name-serif); font-weight: 600;
   font-size: clamp(54px, 7.6vw, 108px);
   line-height: 0.98; letter-spacing: -0.032em;
 }
