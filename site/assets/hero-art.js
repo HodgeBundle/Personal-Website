@@ -28,6 +28,8 @@
   let W = 1, H = 1, unit = 1, maxR = 1, limit = 1, narrow = false;
   let C = { x: 0, y: 0 };          // composition core: the fixed point z*
   let orbits = [], ambient = [], dust = [], treeRoot = null, spiral = null;
+  /* pointer parallax: eased offsets applied to the whole composition */
+  let vx = 0, vy = 0, tx = 0, ty = 0;
 
   function build() {
     const rnd = mulberry32(20260731);
@@ -178,6 +180,13 @@
   function draw(t) {
     ctx.clearRect(0, 0, W, H);
     ctx.lineCap = 'round';
+
+    /* pointer parallax: ease the composition toward the cursor */
+    vx += (tx - vx) * 0.05;
+    vy += (ty - vy) * 0.05;
+    const ox = C.x, oy = C.y;
+    C.x += vx * unit * 0.016;
+    C.y += vy * unit * 0.012;
 
     /* warm breath at the core */
     const g = ctx.createRadialGradient(C.x, C.y, 0, C.x, C.y, maxR * 0.9);
@@ -338,6 +347,8 @@
       ctx.fillStyle = rgba(p.copper ? COPPER : BODY, p.a * (0.35 + 0.65 * fall(xx, yy)));
       ctx.beginPath(); ctx.arc(xx, yy, p.r, 0, Math.PI * 2); ctx.fill();
     }
+
+    C.x = ox; C.y = oy;
   }
 
   /* ---- wiring: DPR-aware resize, rAF loop, reduced-motion & tab-hidden safe ---- */
@@ -365,4 +376,14 @@
   document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
   reduceMQ.addEventListener?.('change', () => { stop(); reduceMQ.matches ? draw(9) : start(); });
   if (reduceMQ.matches) draw(9); else start();
+
+  /* pointer parallax only for fine pointers, never under reduced motion */
+  if (!reduceMQ.matches && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    window.addEventListener('pointermove', e => {
+      tx = (e.clientX / W - 0.5) * 2;
+      ty = (e.clientY / H - 0.5) * 2;
+    }, { passive: true });
+    document.documentElement.addEventListener('pointerleave', () => { tx = 0; ty = 0; });
+    window.__zzParallax = () => ({ tx, ty });
+  }
 })();

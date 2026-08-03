@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f1e8">
 <title>About | Zheng Zhu</title>
 <meta name="description" content="About Zheng Zhu, PIMS Postdoctoral Fellow at the University of Calgary.">
+<link rel="preload" href="../assets/playfair.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/ma-shan-zheng.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js');</script>
 <link rel="canonical" href="https://hodgebundle.github.io/Personal-Website/about/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="About | Zheng Zhu">
@@ -28,27 +32,34 @@
     <p class="eyebrow"><span>About</span></p>
     <h1 class="page-title">Zheng Zhu <span class="cn" lang="zh-Hans">朱政</span></h1>
     <p class="page-lede">PIMS Postdoctoral Fellow at the University of Calgary.</p>
+    <svg class="sig-art" viewBox="0 0 1000 420" aria-hidden="true">
+      <g fill="none" stroke-linecap="round" transform="rotate(-14 720 210)">
+        <ellipse cx="720" cy="210" rx="300" ry="118" stroke="#a86f3c" stroke-width="1.5" opacity="0.5"/>
+        <ellipse cx="720" cy="210" rx="204" ry="80" stroke="#38342e" stroke-width="1.2" opacity="0.26"/>
+        <ellipse cx="720" cy="210" rx="118" ry="46" stroke="#8a542e" stroke-width="1.1" opacity="0.32"/>
+      </g>
+      <circle cx="720" cy="210" r="2.6" fill="#a86f3c" opacity="0.8"/>
+    </svg>
   </section>
 
   <div class="wrap page-body">
     <section class="about-layout" aria-label="Biography and contact information">
-      <figure class="portrait">
-        <img src="../assets/zheng-zhu.jpg" alt="Zheng Zhu standing outdoors beside a circular stone sculpture, with the coastline in the background" width="900" height="1171">
-        <figcaption>Zheng Zhu · 朱政</figcaption>
+      <figure class="portrait" data-reveal>
+        <img src="../assets/zheng-zhu-600.jpg" srcset="../assets/zheng-zhu-600.jpg 600w, ../assets/zheng-zhu.jpg 900w" sizes="(max-width: 900px) min(80vw, 380px), 420px" alt="Zheng Zhu standing outdoors beside a circular stone sculpture at Big Sur, with the coastline in the background" width="600" height="781" loading="lazy" decoding="async">
+        <figcaption>Zheng Zhu · Big Sur, California</figcaption>
       </figure>
 
-      <div>
+      <div data-reveal>
         <div class="prose">
           <span class="k">Biography</span>
           <p>Hello! I am currently a <a href="https://www.pims.math.ca/" target="_blank" rel="noreferrer">PIMS</a> Postdoc Associate at the <a href="https://science.ucalgary.ca/mathematics-statistics" target="_blank" rel="noreferrer">University of Calgary</a>, working with <a href="https://sites.google.com/view/khoanguyen-calgary" target="_blank" rel="noreferrer">Dang-Khoa Nguyen</a>.</p>
           <p>In the spring of 2025, I received my Ph.D. in mathematics under the supervision of <a href="https://www.sas.rochester.edu/mth/people/faculty/tucker-thomas/index.html" target="_blank" rel="noreferrer">Thomas J. Tucker</a> at the University of Rochester. In spring 2023, I was a program associate at MSRI, Berkeley, in the Diophantine Geometry program.</p>
         </div>
 
-        <div class="facts" aria-label="At a glance">
+        <div class="facts" aria-label="At a glance" data-reveal>
           <div class="row"><span class="fk">Position</span><span class="fv">PIMS Postdoctoral Fellow · University of Calgary</span></div>
           <div class="row"><span class="fk">Mentor</span><span class="fv"><a href="https://sites.google.com/view/khoanguyen-calgary" target="_blank" rel="noreferrer">Dang-Khoa Nguyen</a></span></div>
           <div class="row"><span class="fk">Ph.D.</span><span class="fv">University of Rochester, 2025 · Advisor: <a href="https://www.sas.rochester.edu/mth/people/faculty/tucker-thomas/index.html" target="_blank" rel="noreferrer">Thomas J. Tucker</a></span></div>
-          <div class="row"><span class="fk">MSRI</span><span class="fv">Program Associate, Diophantine Geometry · Spring 2023</span></div>
           <div class="row"><span class="fk">Office</span><span class="fv">Mathematical Sciences 464</span></div>
           <div class="row"><span class="fk">Email</span><span class="fv"><a href="mailto:zheng.zhu2@ucalgary.ca">zheng.zhu2@ucalgary.ca</a></span></div>
         </div>
@@ -64,5 +75,6 @@
   <p class="geo">51.0447° N · 114.0719° W — Calgary, AB</p>
 </footer>
 
+<script src="../assets/reveal.js"></script>
 </body>
 </html>

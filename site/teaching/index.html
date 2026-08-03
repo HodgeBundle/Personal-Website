@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f1e8">
 <title>Teaching | Zheng Zhu</title>
 <meta name="description" content="Courses taught by Zheng Zhu at the University of Calgary and University of Rochester.">
+<link rel="preload" href="../assets/playfair.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/ma-shan-zheng.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js');</script>
 <link rel="canonical" href="https://hodgebundle.github.io/Personal-Website/teaching/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Teaching | Zheng Zhu">
@@ -28,16 +32,35 @@
     <p class="eyebrow"><span>Teaching</span></p>
     <h1 class="page-title">Courses and instruction.</h1>
     <p class="page-lede">Current and previous courses at the University of Calgary and the University of Rochester.</p>
+    <svg class="sig-art" viewBox="0 0 1000 420" aria-hidden="true">
+      <g fill="none" stroke-linecap="round" transform="rotate(-14 720 210)">
+        <ellipse cx="720" cy="210" rx="300" ry="118" stroke="#a86f3c" stroke-width="1.5" opacity="0.5"/>
+        <ellipse cx="720" cy="210" rx="204" ry="80" stroke="#38342e" stroke-width="1.2" opacity="0.26"/>
+        <ellipse cx="720" cy="210" rx="118" ry="46" stroke="#8a542e" stroke-width="1.1" opacity="0.32"/>
+      </g>
+      <circle cx="720" cy="210" r="2.6" fill="#a86f3c" opacity="0.8"/>
+    </svg>
   </section>
 
   <div class="wrap page-body">
-    <div class="section-head">
+    <div class="section-head" data-reveal>
       <span class="k">Course history</span>
       <h2>Teaching</h2>
     </div>
 
     <div class="courses">
-      <article class="course">
+      <article class="course" data-reveal>
+        <div class="term">Fall 2026<span>University of Calgary</span></div>
+        <div>
+          <p class="code">MATH 275</p>
+          <h3>Calculus for Engineers and Scientists</h3>
+          <ul>
+            <li>Lectures: Thursday 8:00–9:50 · Thursday 13:00–14:50</li>
+            <li>Office hours: TBA</li>
+          </ul>
+        </div>
+      </article>
+      <article class="course" data-reveal>
         <div class="term">Winter 2026<span>University of Calgary</span></div>
         <div>
           <p class="code">MATH 277</p>
@@ -48,28 +71,28 @@
           </ul>
         </div>
       </article>
-      <article class="course">
+      <article class="course" data-reveal>
         <div class="term">Fall 2024 / Spring 2025<span>University of Rochester</span></div>
         <div>
           <p class="code">MATH 165</p>
           <h3><a href="https://courses.math.rochester.edu/current/165/" target="_blank" rel="noreferrer">Linear Algebra with Differential Equations</a></h3>
         </div>
       </article>
-      <article class="course">
+      <article class="course" data-reveal>
         <div class="term">Spring 2024<span>University of Rochester</span></div>
         <div>
           <p class="code">MATH 162</p>
           <h3><a href="https://courses.math.rochester.edu/current/162/" target="_blank" rel="noreferrer">Calculus II</a></h3>
         </div>
       </article>
-      <article class="course">
+      <article class="course" data-reveal>
         <div class="term">Fall 2023<span>University of Rochester</span></div>
         <div>
           <p class="code">MATH 164</p>
           <h3><a href="https://courses.math.rochester.edu/current/164/" target="_blank" rel="noreferrer">Multivariable Calculus</a></h3>
         </div>
       </article>
-      <article class="course">
+      <article class="course" data-reveal>
         <div class="term">Summer 2022, 2023, 2024<span>University of Rochester</span></div>
         <div>
           <p class="code">MATH 161</p>
@@ -87,5 +110,6 @@
   <p class="geo">51.0447° N · 114.0719° W — Calgary, AB</p>
 </footer>
 
+<script src="../assets/reveal.js"></script>
 </body>
 </html>
