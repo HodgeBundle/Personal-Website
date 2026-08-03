@@ -6,7 +6,7 @@
 
 @font-face { font-family: "Manrope"; src: url("manrope.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
 @font-face { font-family: "Playfair"; src: url("playfair.woff2") format("woff2"); font-weight: 500 700; font-display: swap; }
-@font-face { font-family: "Ibarra Real Nova"; src: url("ibarra-real-nova-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Ibarra Real Nova"; src: url("ibarra-real-nova-600.woff2?v=20260802-2") format("woff2"); font-weight: 600; font-display: swap; }
 @font-face { font-family: "GeistMono"; src: url("geist-mono.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "MaShanZheng"; src: url("ma-shan-zheng.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
